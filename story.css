@@ -1,0 +1,5 @@
+/* Narrative layer: same seven-section application and existing visual palette. */
+.story-bridge{margin-top:38px;padding:28px 32px;border:1px solid #cba7e7;border-radius:24px;background:linear-gradient(120deg,#ecdcff,#ffe5eb);box-shadow:0 9px 22px #63388a12}.story-bridge p{font-size:20px;max-width:940px;margin-top:12px;color:#432258}.story-bridge .button{margin-top:8px}.hero h1{font-family:'Space Grotesk',Arial,sans-serif;font-weight:700;letter-spacing:-.055em;line-height:1.02}.navigation{justify-content:flex-start}.navigation a{font-size:14px;white-space:nowrap}.section-intro h1{max-width:1080px}.section-intro{max-width:1080px}.story-bridge h3{max-width:900px}#compare-image{max-height:660px;object-fit:contain;background:#ebe0f4}.page-nav{margin-top:30px}.hero-copy{width:64%}
+@media(min-width:1440px){.navigation{justify-content:center}}
+@media(max-width:680px){.story-bridge{padding:24px}.story-bridge p{font-size:18px}.hero-copy{width:100%}.hero h1{font-size:52px}.navigation a{font-size:14px}.section-intro h1{overflow-wrap:break-word}}
+@media print{.story-bridge{background:white;box-shadow:none}.story-bridge .button{display:none}}
