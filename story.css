@@ -370,3 +370,29 @@
 .archikit-story-path article.story-path-highlight h3,.archikit-story-path article.story-path-highlight p{color:#1b1028}
 @media(max-width:680px){.akri-chip{white-space:normal}}
 @media(max-width:620px){.archikit-space-synergy{border-radius:20px}}
+
+/* Page 05: ArchiLens 14-week interactive timeline (condensed view) + full-table dropdown. */
+.archilens-timeline{margin:40px 0}
+.week-timeline{display:flex;gap:10px;overflow-x:auto;padding:8px 2px 18px;margin:22px 0;scroll-snap-type:x mandatory}
+.week-timeline button{flex:0 0 92px;scroll-snap-align:start;padding:14px 10px;border-radius:16px;border:1px solid var(--line);border-top:4px solid #cbb8e6;background:#fff;text-align:center}
+.week-timeline button small{display:block;font-size:10px;font-weight:800;letter-spacing:.4px;color:var(--muted);margin-bottom:6px}
+.week-timeline button strong{display:block;font-size:12px;font-weight:800;letter-spacing:.1px;line-height:1.3}
+.week-timeline button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.week-timeline button[aria-pressed=true] small{color:#c9bbe0}
+.week-timeline button.phase-conceive{border-top-color:#9871c9}
+.week-timeline button.phase-design{border-top-color:#d391c8}
+.week-timeline button.phase-implement{border-top-color:#e6a15c}
+.week-timeline button.phase-operate{border-top-color:#5fa8c9}
+.week-detail{padding:32px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(120deg,#f0e8fa,#fff)}
+.week-detail .week-head{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.week-detail .week-num{font:500 46px 'Space Grotesk',sans-serif;color:#9871c9;line-height:1}
+.week-detail .week-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.week-detail .grid2{margin-top:18px}
+.week-detail .grid2:first-of-type{margin-top:6px}
+.pill.phase-conceive{background:#ece2f9;color:#5a2c99}
+.pill.phase-design{background:#fbe3f2;color:#9c2f74}
+.pill.phase-implement{background:#fdead9;color:#95511a}
+.pill.phase-operate{background:#e0f0f7;color:#1b5c78}
+.pill.space-tag{background:#eef6ee;color:#1f6b3d}
+.archilens-timeline .reveal-panel .tablewrap{margin:18px 22px 22px}
+@media(max-width:620px){.week-timeline button{flex:0 0 76px;padding:10px 6px}.week-detail{padding:22px}.week-detail .week-num{font-size:34px}.archilens-timeline .reveal-panel .tablewrap{margin:14px 14px 18px}}
