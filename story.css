@@ -117,6 +117,12 @@
 .archikit-space-showcase{margin:40px 0;padding:clamp(26px,4vw,40px);border-radius:30px;background:linear-gradient(135deg,#eefaff,#fff 55%,#f5edff);border:1px solid #d2bde8;box-shadow:0 18px 45px rgba(45,18,68,.1)}
 .archikit-space-showcase .grid2{margin-top:20px}
 @media(max-width:620px){.archikit-space-showcase{border-radius:22px}}
+.gallery-tabs .gallery-subnav{margin:18px 0 26px}
+.gallery-subnav button small{margin-left:4px;color:#8a7c9c;font-weight:700}
+.gallery-subnav button[aria-pressed=true] small{color:#e2c7ff}
+.pedagogy-glance{margin:36px 0 44px;padding:clamp(24px,3.6vw,38px);border-radius:28px;background:linear-gradient(135deg,#f3edff,#fff 60%,#eafcf6);border:1px solid #d6c8ec;box-shadow:0 16px 40px rgba(45,18,68,.08)}
+.pedagogy-glance-grid{margin-top:18px}
+@media(max-width:620px){.pedagogy-glance{border-radius:20px}}
 .archikit-outcome-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:22px}
 .archikit-outcome-grid figure{overflow:hidden;border-radius:24px;background:white;border:1px solid #d7c7eb;box-shadow:0 14px 36px rgba(45,18,68,.1)}
 .archikit-outcome-grid img{display:block;width:100%;height:420px;object-fit:contain;background:#f4effb}
