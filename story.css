@@ -478,3 +478,8 @@
 .grid2>*,.grid3>*,.ebook-layout>*{min-width:0}
 @media (max-width:1050px){.ebook-layout{grid-template-columns:minmax(0,1fr)}}
 .section-head>*{max-width:100%;min-width:0}
+/* Simplebooklet viewer: full width, fixed height (2026-10-15) */
+.ebook-layout{grid-template-columns:minmax(0,1fr)}
+.ebook-frame{max-width:none;padding-top:0;height:min(88vh,920px);border-radius:16px}
+.ebook-guide{max-width:760px}
+@media (max-width:680px){.ebook-frame{padding-top:0;height:78vh}}
