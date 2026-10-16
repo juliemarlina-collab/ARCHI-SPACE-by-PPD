@@ -854,3 +854,56 @@ Everything in these four cards is drawn from facts already verified elsewhere on
 Verified: `node -c app.js` passed; story.css brace balance (569/569); headless-browser check confirms Page 02 no longer contains the product/classroom evidence heading and now shows the new showcase panel, while Page 03 now contains all three moved blocks; no console/page errors on Pages 02, 03 or 05.
 
 Cache-busting bumped to `?v=20260903-page02page03reorg`.
+
+## 27. Aligned with the AKRI 2026 eBook (Canva, 15102026 edition) + new 08 Video & eBook tab (2026-10-15)
+
+The website now follows the approved eBook as its storyline: ARCHI SPACE = SMART SPACE × CDIO for DCA40462 Immersive Technology.
+
+**Storyline**
+- SPACE stage 1 renamed Sense → See; each stage now carries the eBook's guiding question; a 6th stage, Operate · CDIO, closes the cycle.
+- 14-week matrix: "ArchiLens" renamed SMART SPACE–CDIO matrix and labelled as planned (drafted Aug 2026 for the next session). Weeks 13–14 now end Evaluate → Operate (no "See Again").
+- New: actual RMS delivery record, Weeks 1–14 (Page 05), with the retrospective phase mapping note.
+- Pedagogy panel rewritten as SMART / SPACE / CDIO with the V2V path across four courses (DCA30364 → DCA30373 → DCA30383 → DCA40462).
+- Blended framing fixed: 42 h face-to-face + 38 h non-face-to-face (47.5%). The old claims "VR = virtual half" and "all 80 hours immersive" were removed.
+
+**Numbers (from the eBook)**
+- SMART targets on Page 01 now show the eBook's four targets: CLO1/CLO2 ≥50% target 80% → 100%; pass target 50% → 100%; Sem 3 pass rates 3/3 higher.
+- SLT tables: 14 lecture + 26 practical + 2 presentation (F2F 42) and 32 IL + 6 online assessment (NF2F 38). The wrong "16 lecture" note was fixed.
+- DCA30364 98.1% is now labelled as the pass rate (grade C and above).
+- Reflection: 92.9% skills, 98.9% attitude, 95.7% experience, 4.91/5 overall, 23/23 recommend, 79.3% response rate.
+- Class videos: 8 groups (THE BLACK DRAGON added).
+
+**Privacy:** student registration numbers and individual e-portfolio marks were removed from the page and from app.js, matching the eBook's rule.
+
+**Page 07 (renamed "Impact & next steps")** adds three sections:
+- Team, contributors and advisor.
+- Kohort 2023 vs 2024 pass rates with Fisher p.
+- CDIO Operate in Semester 5 (18 awards, BIM Challenge, 4D BIM, industry projects) and the roadmap.
+
+**Page 08 (new):** embedded 2-minute YouTube video (S5u1iQeVmVY) and the Canva eBook. Includes a judges' page guide and links to the 4 criterion dashboards.
+
+**Also included:** the MyIPO CRDV2025M07544 block and POLYCCOM product report from note 27-draft (same day).
+
+**Fixes:** a mobile horizontal-scroll bug on Page 05 (pre-existing).
+
+**Verification:** `node -c app.js` passed. Headless check of all 8 pages in EN/BM at 1280px and 390px: no page errors, no horizontal scroll.
+
+Cache-busting: `?v=20261015-ebook`.
+
+**Update (22:50):** eBook embed switched from Canva to Simplebooklet (wpKey SWUSfOibtq8FXIzmSy1lY9) because the Canva embed would not display. The viewer is now full width with a fixed height, and the reading guide sits below it. Cache-busting: `?v=20261015-booklet`.
+
+**Update (16 Oct 2026):** the eBook iframe now loads immediately instead of lazily. A "Loading the eBook…" note sits behind the viewer, so a slow or blocked flipbook no longer shows as an empty box. A "Backup: open in Canva" button was added next to the full-screen button. Cache-busting: `?v=20261016-ebookfix`.
+Full-screen button now points to the public booklet page https://simplebooklet.com/copyofcopyofbuletinpolipd21 (same booklet as the embed).
+
+## 28. Self-hosted interactive eBook reader, Kotobee-style (2026-10-16)
+
+The Simplebooklet frame on tab 08 is replaced by a reader built into the site, so nothing depends on an outside flipbook platform.
+
+- Source: `ARCHI SPACE | WHERE DESIGN COMES ALIVE | AKRI 2026.pdf` (65 pages, Canva export 16 Oct 2026). Pages are rendered to WebP at 1600 px (`ebook/pages/`, ~12 MB) with 180 px thumbnails (`ebook/thumbs/`).
+- `ebook/ebook-data.json` holds 725 clickable link areas taken from the PDF (Drive/YouTube evidence plus internal "go to page" links) and per-page text for search.
+- Reader features: chapter sidebar by AKRI criterion (with marks and page ranges), thumbnail strip, page slider, go-to-page box, next/previous arrows, swipe, ←/→/Home/End keys, two-page spreads on wide screens, zoom 100–300% (double-tap/double-click toggles), full screen (with a CSS fallback for iPad/iPhone), search with highlighted snippets, a "highlight links" toggle, and a 2-minute video pop-up. EN/BM labels follow the site language. The last page read is kept for the browser session.
+- New files: `ebook-reader.js`, `ebook-reader.css`, `ebook/…` (131 files). Changed: `app.js` (tab 08 markup; next-section button now also appears on page 07), `story.css`, `index.html`.
+- Simplebooklet and Canva remain as secondary buttons under the reader.
+- Updating the eBook: export a new PDF from Canva and send it in; the page images and link data are regenerated from it.
+
+Verified: headless Chromium at 1366×900, 1024×1366 (iPad portrait) and 390×844. Page turning, chapter jumps, internal page links, external links (open in a new tab), search, zoom, full screen, video and the EN↔BM switch all work. No page errors, no missing files, no horizontal scroll on any of the 8 site pages. Cache-busting: `?v=20261016-reader`.
